@@ -1,0 +1,40 @@
+  
+  [1X1 [33X[0;0YIntroduction[133X[101X
+  
+  [33X[0;0YFLClassify  is  a  package  dedicated  to  the  algebraic  theory  of formal
+  languages, and specifically to the problem of classifying these languages.[133X
+  
+  
+  [1X1.1 [33X[0;0YInstallation[133X[101X
+  
+  [33X[0;0YSimply  unpack  the  source  archive  in your GAP [10Xpkg[110X directory. Use of this
+  package  also  requires  that  the  Semigroups  and  Automata  packages  are
+  installed,  or  other  packages  that  offer  a  compatible interface. These
+  packages are part of the base installation.[133X
+  
+  
+  [1X1.2 [33X[0;0YPreliminaries[133X[101X
+  
+  [33X[0;0YA  semigroup is a set [23XS[123X augmented with some operation, denoted by adjacency,
+  which  is  associative.  That  is,  for  any [23Xa[123X, [23Xb[123X, and [23Xc[123X in [23XS[123X, it holds that
+  [23X(ab)c=a(bc)[123X,  and thus [23Xabc[123X is without ambiguity. A semigroup is a monoid iff
+  it contains some element [23X1[123X such that for all [23Xx[123X, [23X1x=x=x1[123X. For every semigroup
+  [23XS[123X,  there is an associated monoid [23XS^1[123X which is equal to [23XS[123X if it is already a
+  monoid,  else  it  is  equal  to  [23XS[123X with an adjoined element that acts as an
+  identity. Semigroups are not groups: they need not have inverses. Given some
+  element  [23Xx[123X,  there  may  or  may  not  exist some [23Xy[123X such that [23Xxyx=x[123X. If this
+  exists,  [23Xx[123X is called a regular element and [23Xy[123X a pseudoinverse of [23Xx[123X. Note that
+  if  [23Xy[123X  is  a psudoinverse of [23Xx[123X it necessarily follows that [23Xxyx=x[123X and [23Xyxy[123X are
+  pseudoinverses of one another.[133X
+  
+  [33X[0;0YA  formal  language  is  any subset of the free monoid [23X\Sigma^*[123X, although in
+  many cases the empty word is irrelevant to the membership problem, and it is
+  easier  to  work  in  terms  of  the  free semigroup [23X\Sigma^+[123X. As there is a
+  standard  construction  for  this  structure  from  a finite automaton, this
+  package  provides  a  mechanism  by  which  to  import  finite automata in a
+  standard format.[133X
+  
+  [33X[0;0YWhen  presented  with  a  language  as  a finite automaton, rather than as a
+  semigroup,  additional  operations  are unlocked. These are discussed in the
+  final chapter.[133X
+  

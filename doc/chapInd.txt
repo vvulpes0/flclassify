@@ -1,0 +1,38 @@
+  
+  
+  [1XIndex[101X
+  
+  [2XAutomatonFromATT[102X, for IsInputStream 4.1-1 
+  [2XDoubletonGraph[102X, for IsAutomatonObj 4.2-2 
+  [2XIs(Tier)Definite[102X 2.2-2 
+  [2XIs(Tier)ReverseDefinite[102X 2.2-3 
+  [2XIsAcom[102X 2.1-3 
+  [2XIsDA[102X, for IsSemigroup 2.1-4 
+  [2XIsGeneralizedDefinite[102X, for IsSemigroup 2.2-1 
+  [2XIsLocallyDA[102X, for IsSemigroup 3.1-5 
+  [2XIsLocallyJTrivial[102X, for IsSemigroup 3.1-5 
+  [2XIsLocallyLTrivial[102X, for IsSemigroup 3.1-5 
+  [2XIsLocallyRTrivial[102X, for IsSemigroup 3.1-5 
+  [2XIsLocallyTestable[102X, for IsSemigroup 3.1-5 
+  [2XIsLocallyThresholdTestable[102X, for IsSemigroup 3.1-5 
+  [2XIsPiecewiseTestable[102X 2.1-2 
+  [2XIsStarFree[102X 2.1-1 
+  [2XIsStrictlyLocal[102X, for IsAutomatonObj 4.2-1 
+  [2XIsTierGeneralizedDefinite[102X, for IsSemigroup 2.2-1 
+  [2XIsTierLocallyDA[102X, for IsSemigroup 3.1-8 
+  [2XIsTierLocallyJTrivial[102X, for IsSemigroup 3.1-8 
+  [2XIsTierLocallyLTrivial[102X, for IsSemigroup 3.1-8 
+  [2XIsTierLocallyRTrivial[102X, for IsSemigroup 3.1-8 
+  [2XIsTierLocallyTestable[102X, for IsSemigroup 3.1-8 
+  [2XIsTierLocallyThresholdTestable[102X, for IsSemigroup 3.1-8 
+  [2XIsTierStrictlyLocal[102X, for IsAutomatonObj 4.2-1 
+  [2XIteratorOfLocalSubmonoids[102X, for IsSemigroup 3.1-3 
+  [2XLocally[102X, for IsFunction, IsSemigroup 3.1-4 
+  [2XLocalSubmonoids[102X, for IsSemigroup 3.1-2 
+  [2XLocalSubsemigroup[102X, for IsSemigroup, IsMultiplicativeElement 3.1-1 
+  [2XProjectedSubsemigroup[102X, for IsSemigroup 3.1-6 
+  [2XSalienceProjection[102X, for IsAutomatonObj 4.2-3 
+  [2XTierLocally[102X, for IsFunction, IsSemigroup 3.1-7 
+  
+  
+  -------------------------------------------------------

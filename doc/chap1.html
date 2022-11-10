@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>GAP (flclassify) - Chapter 1: Introduction</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="GAPDoc2HTML" />
+<link rel="stylesheet" type="text/css" href="manual.css" />
+<script src="manual.js" type="text/javascript"></script>
+<script type="text/javascript">overwriteStyle();</script>
+</head>
+<body class="chap1"  onload="jscontent()">
+
+
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+
+<div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap0.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap2.html">[Next Chapter]</a>&nbsp;  </div>
+
+<p id="mathjaxlink" class="pcenter"><a href="chap1_mj.html">[MathJax on]</a></p>
+<p><a id="X7DFB63A97E67C0A1" name="X7DFB63A97E67C0A1"></a></p>
+<div class="ChapSects"><a href="chap1.html#X7DFB63A97E67C0A1">1 <span class="Heading">Introduction</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap1.html#X8360C04082558A12">1.1 <span class="Heading">Installation</span></a>
+</span>
+</div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap1.html#X8749E1888244CC3D">1.2 <span class="Heading">Preliminaries</span></a>
+</span>
+</div>
+</div>
+
+<h3>1 <span class="Heading">Introduction</span></h3>
+
+<p>FLClassify is a package dedicated to the algebraic theory of formal languages, and specifically to the problem of classifying these languages.</p>
+
+<p><a id="X8360C04082558A12" name="X8360C04082558A12"></a></p>
+
+<h4>1.1 <span class="Heading">Installation</span></h4>
+
+<p>Simply unpack the source archive in your GAP <code class="code">pkg</code> directory. Use of this package also requires that the Semigroups and Automata packages are installed, or other packages that offer a compatible interface. These packages are part of the base installation.</p>
+
+<p><a id="X8749E1888244CC3D" name="X8749E1888244CC3D"></a></p>
+
+<h4>1.2 <span class="Heading">Preliminaries</span></h4>
+
+<p>A semigroup is a set <span class="Math">S</span> augmented with some operation, denoted by adjacency, which is associative. That is, for any <span class="Math">a</span>, <span class="Math">b</span>, and <span class="Math">c</span> in <span class="Math">S</span>, it holds that <span class="Math">(ab)c=a(bc)</span>, and thus <span class="Math">abc</span> is without ambiguity. A semigroup is a monoid iff it contains some element <span class="Math">1</span> such that for all <span class="Math">x</span>, <span class="Math">1x=x=x1</span>. For every semigroup <span class="Math">S</span>, there is an associated monoid <span class="Math">S^1</span> which is equal to <span class="Math">S</span> if it is already a monoid, else it is equal to <span class="Math">S</span> with an adjoined element that acts as an identity. Semigroups are not groups: they need not have inverses. Given some element <span class="Math">x</span>, there may or may not exist some <span class="Math">y</span> such that <span class="Math">xyx=x</span>. If this exists, <span class="Math">x</span> is called a regular element and <span class="Math">y</span> a pseudoinverse of <span class="Math">x</span>. Note that if <span class="Math">y</span> is a psudoinverse of <span class="Math">x</span> it necessarily follows that <span class="Math">xyx=x</span> and <span class="Math">yxy</span> are pseudoinverses of one another.</p>
+
+<p>A formal language is any subset of the free monoid <span class="Math">\Sigma^*</span>, although in many cases the empty word is irrelevant to the membership problem, and it is easier to work in terms of the free semigroup <span class="Math">\Sigma^+</span>. As there is a standard construction for this structure from a finite automaton, this package provides a mechanism by which to import finite automata in a standard format.</p>
+
+<p>When presented with a language as a finite automaton, rather than as a semigroup, additional operations are unlocked. These are discussed in the final chapter.</p>
+
+<p><figure> <img src="fig-hierarchy.svg" alt="StarFree is above DA which is above LTrivial, RTrivial and Band. Each of LTrivial and RTrivial is above PiecewiseTestable. PiecewiseTestable is above Acom. Each of Acom and Band is above Semilattice, which is above Trivial." /><figcaption> A hierarchy of classes which triplicates. </figcaption></figure></p>
+
+
+<div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap0.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap2.html">[Next Chapter]</a>&nbsp;  </div>
+
+
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+
+<hr />
+<p class="foot">generated by <a href="http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>
+</body>
+</html>

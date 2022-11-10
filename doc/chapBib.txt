@@ -1,0 +1,52 @@
+  
+  
+  [1XReferences[101X
+  
+  [[20XAlm89[120X]  [16XAlmeida,  J.[116X,  [17XSemidirect  Products  of  Pseudovarieties  from  the
+  Universal  Algebraist's  Point of View[117X, [18XJournal of Pure and Applied Algebra[118X,
+  [19X60[119X, 2 (1989), 113--128.
+  
+  [[20XBP89[120X]  [16XBeauquier,  D.  and Pin, J.-\.[116X ([1m[31mAusiello, G., Dezani-Ciancaglini, M.
+  and  Ronchi Della Rocca, S.[15X, Eds.), [17XFactors of Words[117X, in Automata, Languages
+  and   Programming:   16th   International   Colloquium,  Springer  Berlin  /
+  Heidelberg, Lecture Notes in Computer Science, [19X372[119X (1989), 63--79.
+  
+  [[20XBS73[120X]  [16XBrzozowski,  J.  A.  and  Simon,  I.[116X,  [17XCharacterizations  of Locally
+  Testable Events[117X, [18XDiscrete Mathematics[118X, [19X4[119X, 3 (1973), 243--271.
+  
+  [[20XELM+08[120X]  [16XEdlefsen,  M.,  Leeman, D., Myers, N., Smith, N., Visscher, M. and
+  Wellcome,   D.[116X  ([1m[31mBreitenbucher,  J.[15X,  Ed.),  [17XDeciding  Strictly  Local  (SL)
+  Languages[117X, in Proceedings of the 2008 Midstates Conference for Undergraduate
+  Research in Computer Science and Mathematics (2008), 66--73.
+  
+  [[20XGre51[120X] [16XGreen, J. A.[116X, [17XOn the Structure of Semigroups[117X, [18XAnnals of Mathematics[118X,
+  [19X54[119X, 1 (1951), 163--172.
+  
+  [[20XLam22[120X]  [16XLambert,  D.[116X,  [17XUnifying  Classification  Schemes  for Languages and
+  Processes  with  Attention  to  Locality  and Relativizations Thereof[117X, Ph.D.
+  thesis, Stony Brook University (2022).
+  
+  [[20XMP71[120X]  [16XMc{N}aughton, R. and Papert, S. A.[116X, [17XCounter-Free Automata[117X, MIT Press
+  (1971).
+  
+  [[20XRL19[120X]  [16XRogers,  J.  and  Lambert,  D.[116X  ([1m[31mDrewes, Frank and Kanazawa, Makoto[15X,
+  Eds.), [17XExtracting Subregular Constraints from Regular Stringsets[117X, [18XJournal of
+  Language  Modelling[118X,  Institute  of  Computer  Science,  Polish  Academy  of
+  Sciences, [19X7[119X, 2 (2019), 143--176.
+  
+  [[20XSch65[120X]  [16XSch\"utzenberger,  M.-P.[116X,  [17XOn  Finite  Monoids  Having Only Trivial
+  Subgroups[117X, [18XInformation and Control[118X, [19X8[119X, 2 (1965), 190--194.
+  
+  [[20XSim75[120X]  [16XSimon,  I.[116X  ([1m[31mBrakhage,  H.[15X,  Ed.),  [17XPiecewise  Testable  Events[117X, in
+  Automata  Theory  and  Formal  Languages,  Springer-Verlag, Lecture Notes in
+  Computer Science, [19X33[119X, Berlin (1975), 214--222.
+  
+  [[20XTW98[120X]  [16XTh\'erien,  D.  and  Wilke,  T.[116X,  [17XOver  Words,  Two Variables are as
+  Powerful  as Powerful as One Quantifier Alternation: mathrmFO^2 = Σ_2 ∩ Π_2[117X,
+  in  STOC '98: Proceedings of the Thirtieth Annual ACM Symbosium on Theory of
+  Computing,  Association  for  Computing  Machinery,  New  York,  NY  (1998),
+  234--240.
+  
+  
+  
+  [32X

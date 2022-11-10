@@ -1,0 +1,143 @@
+  
+  [1X2 [33X[0;0YGreen's Relations[133X[101X
+  
+  [33X[0;0YThe  following relations, introduced by Green [Gre51], have been fundamental
+  in studying the structure of semigroups:[133X
+  
+  [30X    [33X[0;6Y[23Xa\mathrel{\mathcal{L}}b[123X iff [23XS^1 a=S^1 b[123X[133X
+  
+  [30X    [33X[0;6Y[23Xa\mathrel{\mathcal{R}}b[123X iff [23XaS^1=bS^1[123X[133X
+  
+  [30X    [33X[0;6Y[23Xa\mathrel{\mathcal{J}}b[123X iff [23XS^1 aS^1=S^1 bS^1[123X[133X
+  
+  [30X    [33X[0;6Y[23Xa\mathrel{\mathcal{H}}b[123X      iff      [23Xa\mathrel{\mathcal{L}}b[123X      and
+        [23Xa\mathrel{\mathcal{R}}b[123X[133X
+  
+  [30X    [33X[0;6Y[23Xa\mathrel{\mathcal{D}}b[123X iff there is a [23Xc[123X where [23Xa\mathrel{\mathcal{L}}c[123X
+        and [23Xc\mathrel{\mathcal{R}}b[123X[133X
+  
+  [33X[0;0YA  language  is  regular  iff its syntactic semigroup is finite, so for this
+  work we can operate in a space where [23X\mathcal{J}=\mathcal{D}[123X.[133X
+  
+  [33X[0;0YRegular  [23X\mathcal{D}[123X-classes  are sometimes relevant. A [23X\mathcal{D}[123X-class is
+  regular iff it contains a regular element.[133X
+  
+  
+  [1X2.1 [33X[0;0YTriviality Under Certain Relations[133X[101X
+  
+  [33X[0;0YMany  important  classes  of  languages are defined by properties related to
+  these  relations.  The  simplest  are those corresponding to first-order and
+  propositional logic over general precedence.[133X
+  
+  [1X2.1-1 IsStarFree[101X
+  
+  [33X[1;0Y[29X[2XIsStarFree[102X( [3Xsemigroup[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false[133X
+  
+  [33X[0;0YDetermine  if  a  semigroup  recognizes  only  star-free  languages. This is
+  implemented as a synonym, so there is no corresponding [10XHasIsStarFree[110X.[133X
+  
+  [33X[0;0YA  language  is  star-free  iff  it  is  definable  by a generalized regular
+  expression  without  the  use  of the star. That is, it is the closure under
+  concatenation,  union,  intersection,  and  complement  of singleton sets of
+  words.  As  demonstrated  by Schützenberger [Sch65], a language is star-free
+  iff  its syntactic semigroup is finite and aperiodic. Aperiodic simply means
+  that   every   [23X\mathcal{H}[123X-class   is   singleton,  that  the  semigroup  is
+  [23X\mathcal{H}[123X-trivial.   McNaughton   and  Papert  show  that  a  language  is
+  first-order definable with less-than iff it is star-free [MP71].[133X
+  
+  [1X2.1-2 IsPiecewiseTestable[101X
+  
+  [33X[1;0Y[29X[2XIsPiecewiseTestable[102X( [3Xsemigroup[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false[133X
+  
+  [33X[0;0YDetermine  if a semigroup recognizes only piecewise testable languages. This
+  is    implemented   as   a   synonym,   so   there   is   no   corresponding
+  [10XHasIsPiecewiseTestable[110X.[133X
+  
+  [33X[0;0YA  language is piecewise testable iff it is definable by its allowed sets of
+  subsequences,  where  a  subsequence  is a (finite) sequence of symbols that
+  occur  in order but not necessarily adjacent to one another. As demonstrated
+  by  Simon  [Sim75],  a  language  is  piecewise  testable  iff its syntactic
+  semigroup  is finite and [23X\mathcal{J}[123X-trivial. This definition corresponds to
+  a propositional logic whose propositions are the occurrence of subsequences,
+  defined by less-than alone.[133X
+  
+  [33X[0;0YThe [23X\mathcal{L}[123X- and [23X\mathcal{R}[123X-trivial languages are useful in some sense,
+  but  have not been given other names in the literature. Thus no synonyms are
+  provided.  We  shall see them later when discussing definability by affixes.
+  First,  though, let us consider two special subclasses of piecewise testable
+  semigroups: Acom and semilattices.[133X
+  
+  [1X2.1-3 IsAcom[101X
+  
+  [33X[1;0Y[29X[2XIsAcom[102X( [3Xsemigroup[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false[133X
+  
+  [33X[0;0YDetermine  if  a semigroup is aperiodic and commutative. This is implemented
+  as a synonym, so there is no corresponding [10XHasIsAcom[110X.[133X
+  
+  [33X[0;0YThe  corresponding languages are based on restrictions on their multisets of
+  symbols,  where  counts saturate at some threshold [23Xt[123X. The special case where
+  [23Xt=1[123X  is a restriction on which sets of symbols appear; this smaller subclass
+  corresponds to [10XIsSemilattice[110X.[133X
+  
+  [33X[0;0YFinally,  there  is  a  class  which  contains  all  of the [23X\mathcal{L}[123X- and
+  [23X\mathcal{R}[123X-trivial langugaes without moving all the way up to star-free:[133X
+  
+  [1X2.1-4 IsDA[101X
+  
+  [33X[1;0Y[29X[2XIsDA[102X( [3Xsemigroup[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false[133X
+  
+  [33X[0;0YDecide  if  a  semigroup  is  in  DA,  that  is,  whether all of its regular
+  [23X\mathcal{D}[123X-classes  are  aperiodic semigroups. This is equivalent to asking
+  whether  all  regular elements are idempotent. Thérien and Wilke demonstrate
+  that  this  class  corresponds  precisely  to  first-order definability with
+  less-than but only two formal variables [TW98].[133X
+  
+  
+  [1X2.2 [33X[0;0YAffixes[133X[101X
+  
+  [33X[0;0YThis  section  details  languages defined by sets of permitted affixes. They
+  might  just as well be in the later chapter on local properties, but in fact
+  they are decidable without invoking the mechanisms of that section.[133X
+  
+  [1X2.2-1 IsGeneralizedDefinite[101X
+  
+  [33X[1;0Y[29X[2XIsGeneralizedDefinite[102X( [3Xsemigroup[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsTierGeneralizedDefinite[102X( [3Xsemigroup[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false[133X
+  
+  [33X[0;0YA  language  is  generalized  definite  iff  it  is  defined  by  a  Boolean
+  combination   of   permitted   suffixes.  This  corresponds  to  having  all
+  idempotents be [23X\mathcal{D}[123X-related, which trivially makes this a subclass of
+  DA.  A  language  is  tier-based  generalized  definite  iff  its  projected
+  subsemigroup  is  generalized  definite.  The  projected subsemigroup is the
+  semigroup generated by [23XS^1\setminus\{1\}[123X.[133X
+  
+  [1X2.2-2 Is(Tier)Definite[101X
+  
+  [33X[1;0Y[29X[2XIs(Tier)Definite[102X( [3Xsemigroup[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false[133X
+  
+  [33X[0;0YDetermine  if a semigroup is (tier-based) definite. These are implemented as
+  synonyms, so there is no corresponding [10XHasIsDefinite[110X or [10XHasIsTierDefinite[110X.[133X
+  
+  [33X[0;0YA  language  is  (tier-based)  definite  iff  it  is  defined  by  a Boolean
+  combination  of  suffixes.  These  are all and only those languages that are
+  both (tier-based) generalized definite and [23X\mathcal{L}[123X-trivial.[133X
+  
+  [1X2.2-3 Is(Tier)ReverseDefinite[101X
+  
+  [33X[1;0Y[29X[2XIs(Tier)ReverseDefinite[102X( [3Xsemigroup[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false[133X
+  
+  [33X[0;0YDetermine  if  a  semigroup  is  (tier-based)  reverse  definite.  These are
+  implemented  as  synonyms,  so  there  is  no corresponding [10XHasIsDefinite[110X or
+  [10XHasIsTierDefinite[110X.[133X
+  
+  [33X[0;0YA  language  is (tier-based) reverse definite iff it is defined by a Boolean
+  combination  of  prefixes.  These  are all and only those languages that are
+  both (tier-based) generalized definite and [23X\mathcal{R}[123X-trivial.[133X
+  

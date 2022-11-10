@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>GAP (flclassify) - Chapter 2: Green's Relations</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="GAPDoc2HTML" />
+<link rel="stylesheet" type="text/css" href="manual.css" />
+<script src="manual.js" type="text/javascript"></script>
+<script type="text/javascript">overwriteStyle();</script>
+</head>
+<body class="chap2"  onload="jscontent()">
+
+
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+
+<div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap1.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap3.html">[Next Chapter]</a>&nbsp;  </div>
+
+<p id="mathjaxlink" class="pcenter"><a href="chap2_mj.html">[MathJax on]</a></p>
+<p><a id="X80C6C718801855E9" name="X80C6C718801855E9"></a></p>
+<div class="ChapSects"><a href="chap2.html#X80C6C718801855E9">2 <span class="Heading">Green's Relations</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X80213A8B84940927">2.1 <span class="Heading">Triviality Under Certain Relations</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7E7E4EE985217292">2.1-1 IsStarFree</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X878DE41683E0D526">2.1-2 IsPiecewiseTestable</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7B92DE637CF3B5B0">2.1-3 IsAcom</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X8583E164831D23C4">2.1-4 IsDA</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X783B5E307E49C995">2.2 <span class="Heading">Affixes</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7A0BAE8C7CF2216E">2.2-1 IsGeneralizedDefinite</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7EBE44FC7E6BC326">2.2-2 Is(Tier)Definite</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X83630B727D15CC2D">2.2-3 Is(Tier)ReverseDefinite</a></span>
+</div></div>
+</div>
+
+<h3>2 <span class="Heading">Green's Relations</span></h3>
+
+<p>The following relations, introduced by Green <a href="chapBib.html#biBGreen1951">[Gre51]</a>, have been fundamental in studying the structure of semigroups:</p>
+
+
+<ul>
+<li><p><span class="Math">a\mathrel{\mathcal{L}}b</span> iff <span class="Math">S^1 a=S^1 b</span></p>
+
+</li>
+<li><p><span class="Math">a\mathrel{\mathcal{R}}b</span> iff <span class="Math">aS^1=bS^1</span></p>
+
+</li>
+<li><p><span class="Math">a\mathrel{\mathcal{J}}b</span> iff <span class="Math">S^1 aS^1=S^1 bS^1</span></p>
+
+</li>
+<li><p><span class="Math">a\mathrel{\mathcal{H}}b</span> iff <span class="Math">a\mathrel{\mathcal{L}}b</span> and <span class="Math">a\mathrel{\mathcal{R}}b</span></p>
+
+</li>
+<li><p><span class="Math">a\mathrel{\mathcal{D}}b</span> iff there is a <span class="Math">c</span> where <span class="Math">a\mathrel{\mathcal{L}}c</span> and <span class="Math">c\mathrel{\mathcal{R}}b</span></p>
+
+</li>
+</ul>
+<p>A language is regular iff its syntactic semigroup is finite, so for this work we can operate in a space where <span class="Math">\mathcal{J}=\mathcal{D}</span>.</p>
+
+<p>Regular <span class="Math">\mathcal{D}</span>-classes are sometimes relevant. A <span class="Math">\mathcal{D}</span>-class is regular iff it contains a regular element.</p>
+
+<p><a id="X80213A8B84940927" name="X80213A8B84940927"></a></p>
+
+<h4>2.1 <span class="Heading">Triviality Under Certain Relations</span></h4>
+
+<p>Many important classes of languages are defined by properties related to these relations. The simplest are those corresponding to first-order and propositional logic over general precedence.</p>
+
+<p><a id="X7E7E4EE985217292" name="X7E7E4EE985217292"></a></p>
+
+<h5>2.1-1 IsStarFree</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsStarFree</code>( <var class="Arg">semigroup</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: true or false</p>
+
+<p>Determine if a semigroup recognizes only star-free languages. This is implemented as a synonym, so there is no corresponding <code class="code">HasIsStarFree</code>.</p>
+
+<p>A language is star-free iff it is definable by a generalized regular expression without the use of the star. That is, it is the closure under concatenation, union, intersection, and complement of singleton sets of words. As demonstrated by Schützenberger <a href="chapBib.html#biBSchutzenberger1965">[Sch65]</a>, a language is star-free iff its syntactic semigroup is finite and aperiodic. Aperiodic simply means that every <span class="Math">\mathcal{H}</span>-class is singleton, that the semigroup is <span class="Math">\mathcal{H}</span>-trivial. McNaughton and Papert show that a language is first-order definable with less-than iff it is star-free <a href="chapBib.html#biBMcNaughtonPapert1971">[MP71]</a>.</p>
+
+<p><a id="X878DE41683E0D526" name="X878DE41683E0D526"></a></p>
+
+<h5>2.1-2 IsPiecewiseTestable</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsPiecewiseTestable</code>( <var class="Arg">semigroup</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: true or false</p>
+
+<p>Determine if a semigroup recognizes only piecewise testable languages. This is implemented as a synonym, so there is no corresponding <code class="code">HasIsPiecewiseTestable</code>.</p>
+
+<p>A language is piecewise testable iff it is definable by its allowed sets of subsequences, where a subsequence is a (finite) sequence of symbols that occur in order but not necessarily adjacent to one another. As demonstrated by Simon <a href="chapBib.html#biBSimon1975">[Sim75]</a>, a language is piecewise testable iff its syntactic semigroup is finite and <span class="Math">\mathcal{J}</span>-trivial. This definition corresponds to a propositional logic whose propositions are the occurrence of subsequences, defined by less-than alone.</p>
+
+<p>The <span class="Math">\mathcal{L}</span>- and <span class="Math">\mathcal{R}</span>-trivial languages are useful in some sense, but have not been given other names in the literature. Thus no synonyms are provided. We shall see them later when discussing definability by affixes. First, though, let us consider two special subclasses of piecewise testable semigroups: Acom and semilattices.</p>
+
+<p><a id="X7B92DE637CF3B5B0" name="X7B92DE637CF3B5B0"></a></p>
+
+<h5>2.1-3 IsAcom</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsAcom</code>( <var class="Arg">semigroup</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: true or false</p>
+
+<p>Determine if a semigroup is aperiodic and commutative. This is implemented as a synonym, so there is no corresponding <code class="code">HasIsAcom</code>.</p>
+
+<p>The corresponding languages are based on restrictions on their multisets of symbols, where counts saturate at some threshold <span class="Math">t</span>. The special case where <span class="Math">t=1</span> is a restriction on which sets of symbols appear; this smaller subclass corresponds to <code class="code">IsSemilattice</code>.</p>
+
+<p>Finally, there is a class which contains all of the <span class="Math">\mathcal{L}</span>- and <span class="Math">\mathcal{R}</span>-trivial langugaes without moving all the way up to star-free:</p>
+
+<p><a id="X8583E164831D23C4" name="X8583E164831D23C4"></a></p>
+
+<h5>2.1-4 IsDA</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsDA</code>( <var class="Arg">semigroup</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: true or false</p>
+
+<p>Decide if a semigroup is in DA, that is, whether all of its regular <span class="Math">\mathcal{D}</span>-classes are aperiodic semigroups. This is equivalent to asking whether all regular elements are idempotent. Thérien and Wilke demonstrate that this class corresponds precisely to first-order definability with less-than but only two formal variables <a href="chapBib.html#biBTherienWilke1998">[TW98]</a>.</p>
+
+<p><a id="X783B5E307E49C995" name="X783B5E307E49C995"></a></p>
+
+<h4>2.2 <span class="Heading">Affixes</span></h4>
+
+<p>This section details languages defined by sets of permitted affixes. They might just as well be in the later chapter on local properties, but in fact they are decidable without invoking the mechanisms of that section.</p>
+
+<p><a id="X7A0BAE8C7CF2216E" name="X7A0BAE8C7CF2216E"></a></p>
+
+<h5>2.2-1 IsGeneralizedDefinite</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsGeneralizedDefinite</code>( <var class="Arg">semigroup</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsTierGeneralizedDefinite</code>( <var class="Arg">semigroup</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: true or false</p>
+
+<p>A language is generalized definite iff it is defined by a Boolean combination of permitted suffixes. This corresponds to having all idempotents be <span class="Math">\mathcal{D}</span>-related, which trivially makes this a subclass of DA. A language is tier-based generalized definite iff its projected subsemigroup is generalized definite. The projected subsemigroup is the semigroup generated by <span class="Math">S^1\setminus\{1\}</span>.</p>
+
+<p><a id="X7EBE44FC7E6BC326" name="X7EBE44FC7E6BC326"></a></p>
+
+<h5>2.2-2 Is(Tier)Definite</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Is(Tier)Definite</code>( <var class="Arg">semigroup</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: true or false</p>
+
+<p>Determine if a semigroup is (tier-based) definite. These are implemented as synonyms, so there is no corresponding <code class="code">HasIsDefinite</code> or <code class="code">HasIsTierDefinite</code>.</p>
+
+<p>A language is (tier-based) definite iff it is defined by a Boolean combination of suffixes. These are all and only those languages that are both (tier-based) generalized definite and <span class="Math">\mathcal{L}</span>-trivial.</p>
+
+<p><a id="X83630B727D15CC2D" name="X83630B727D15CC2D"></a></p>
+
+<h5>2.2-3 Is(Tier)ReverseDefinite</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Is(Tier)ReverseDefinite</code>( <var class="Arg">semigroup</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: true or false</p>
+
+<p>Determine if a semigroup is (tier-based) reverse definite. These are implemented as synonyms, so there is no corresponding <code class="code">HasIsDefinite</code> or <code class="code">HasIsTierDefinite</code>.</p>
+
+<p>A language is (tier-based) reverse definite iff it is defined by a Boolean combination of prefixes. These are all and only those languages that are both (tier-based) generalized definite and <span class="Math">\mathcal{R}</span>-trivial.</p>
+
+
+<div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap1.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap3.html">[Next Chapter]</a>&nbsp;  </div>
+
+
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+
+<hr />
+<p class="foot">generated by <a href="http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>
+</body>
+</html>

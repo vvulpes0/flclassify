@@ -1,0 +1,106 @@
+  
+  [1X4 [33X[0;0YOperations on Automata[133X[101X
+  
+  [33X[0;0YWhile the majority of the functionality of this package comes from algebraic
+  manipulation, some problems are just not amenable to that setting. For those
+  times,  one  might wish to work directly with finite automata. Here we offer
+  one  mechanism for importing machines and some decision problems that cannot
+  be handled with semigroups alone.[133X
+  
+  
+  [1X4.1 [33X[0;0YImporting Automata[133X[101X
+  
+  [1X4.1-1 AutomatonFromATT[101X
+  
+  [33X[1;0Y[29X[2XAutomatonFromATT[102X( [3Xstream[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Yan automaton[133X
+  
+  [33X[0;0YImport  an automaton from AT&T-style tabular text read from [3Xstream[103X. Each row
+  contains  no  more  than  five  whitespace-separated fields. An empty row is
+  ignored. A row with one or two fields represents an accepting state, perhaps
+  with  a weight which is ignored here. A row with three, four, or five fields
+  represents  a  transition.  The  first,  second,  and  third  fields  always
+  represent  the  source,  destination,  and  input  symbol, respectively, and
+  subsequent fields are again ignored.[133X
+  
+  [33X[0;0YFor  example  the  following  text  represents the pictured automaton, which
+  itself   represents   strings   over   [23X\Sigma=\{a,b,c\}[123X  not  containing  an
+  "[23Xab[123X"-substring.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X1 2 a[128X[104X
+    [4X[28X1 1 b[128X[104X
+    [4X[28X1 1 c[128X[104X
+    [4X[28X1[128X[104X
+    [4X[28X2 2 a[128X[104X
+    [4X[28X2 3 b[128X[104X
+    [4X[28X2 1 c[128X[104X
+    [4X[28X2[128X[104X
+    [4X[28X3 3 a[128X[104X
+    [4X[28X3 3 b[128X[104X
+    [4X[28X3 3 c[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X4.2 [33X[0;0YStrict Locality and Relativizations[133X[101X
+  
+  [33X[0;0YA  language  is  locally  testable  in the strict sense (strictly local) iff
+  there  is  some value [23Xk[123X and some set [23XS[123X of anchored words of length at most [23Xk[123X
+  such  that  the  words  in  the  language are all and only those that do not
+  contain  any element of [23XS[123X as a substring when anchored. As this class is not
+  closed  under  complement,  there  can  be no characterization for the class
+  based  on the syntactic semigroup alone without further metadata. But all is
+  not lost.[133X
+  
+  [33X[0;0YCharacterized  by  closure  under  substitution of suffixes following shared
+  length-[23Xk[123X  substrings,  the  strictly  local  languages  are  associated with
+  automata  that  synchronize  after  no  more than [23Xk[123X steps [ELM+08]. In other
+  words, from any state [23Xp[123X it is necessarily the case that following a length-[23Xk[123X
+  word  [23Xw[123X  will  lead  to the same state as it would when following [23Xw[123X from any
+  other state [23Xq[123X.[133X
+  
+  [33X[0;0YThere  exists  an exponential-time algorithm for deciding membership in this
+  class,  which  admits  simultaneously  extracting  the  grammar of forbidden
+  substrings [RL19], but the polynomial-time process of [ELM+08] is used here.
+  If  the  trim,  minimal  automaton  has  states  [23XQ[123X, then class membership is
+  decidable  using  the  subgraph  of the product construction containing only
+  nodes  of  the form [23XQ\times Q[123X whose two components are inequal. The language
+  is strictly local iff this graph is acyclic.[133X
+  
+  
+  [1X4.2-1 [33X[0;0YIs(Tier)StrictlyLocal[133X[101X
+  
+  [33X[1;0Y[29X[2XIsStrictlyLocal[102X( [3Xaut[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsTierStrictlyLocal[102X( [3Xaut[103X ) [32X property[133X
+  [6XReturns:[106X  [33X[0;10Ytrue or false[133X
+  
+  [33X[0;0YDetermine  if the language represented by [3Xaut[103X is strictly [23Xk[123X-local for some [23Xk[123X
+  that  is,  if  it  is  definable as a conjunction of forbidden substrings. A
+  language  is  [13Xtier-based[113X  strictly  local  iff there is some subset [23XT[123X of its
+  alphabet  (a  tier  of  salient  symbols)  such that symbols not in [23XT[123X may be
+  freely  inserted  and  deleted  and  the  projection  to [23XT[123X is strictly local
+  [Lam22].[133X
+  
+  [33X[0;0YThe  constructions used in deciding (tier-based) strict locality are exposed
+  in case they might be useful for other purposes. Recall that salience has an
+  algebraic characterization as well, which should be preferred when possible.[133X
+  
+  [1X4.2-2 DoubletonGraph[101X
+  
+  [33X[1;0Y[29X[2XDoubletonGraph[102X( [3Xaut[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Yan automaton[133X
+  
+  [33X[0;0YConstruct  an  automaton  whose  underlying  graph is the pair-graph used in
+  deciding  strict  locality.  The  initial  state  is the pair containing two
+  copies  of  the  initial state of [3Xaut[103X, and the final states are all pairs in
+  which both elements are accepting.[133X
+  
+  [1X4.2-3 SalienceProjection[101X
+  
+  [33X[1;0Y[29X[2XSalienceProjection[102X( [3Xaut[103X ) [32X operation[133X
+  [6XReturns:[106X  [33X[0;10Yan automaton[133X
+  
+  [33X[0;0YRemove  nonsalient  symbols, those that are freely insertable and deletable.
+  For  a  language  in  a tier-based class, this provides the projection under
+  which the grammar operates. See also [2XProjectedSubsemigroup[102X ([14X3.1-6[114X).[133X
+  

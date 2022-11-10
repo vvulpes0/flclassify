@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>GAP (flclassify) - Chapter 4: Operations on Automata</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="GAPDoc2HTML" />
+<link rel="stylesheet" type="text/css" href="manual.css" />
+<script src="manual.js" type="text/javascript"></script>
+<script type="text/javascript">overwriteStyle();</script>
+</head>
+<body class="chap4"  onload="jscontent()">
+
+
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+
+<div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap3.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib.html">[Next Chapter]</a>&nbsp;  </div>
+
+<p id="mathjaxlink" class="pcenter"><a href="chap4_mj.html">[MathJax on]</a></p>
+<p><a id="X795623AE7DB6FCDA" name="X795623AE7DB6FCDA"></a></p>
+<div class="ChapSects"><a href="chap4.html#X795623AE7DB6FCDA">4 <span class="Heading">Operations on Automata</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4.html#X7E234C3582D64933">4.1 <span class="Heading">Importing Automata</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X7A74CB977868385B">4.1-1 AutomatonFromATT</a></span>
+</div></div>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4.html#X82BDE1757BF5D21B">4.2 <span class="Heading">Strict Locality and Relativizations</span></a>
+</span>
+<div class="ContSSBlock">
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X80FD58AD848CA654">4.2-1 <span class="Heading">Is(Tier)StrictlyLocal</span></a>
+</span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X7F0C9EE78218A84F">4.2-2 DoubletonGraph</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X7B1A0F2F79A719A7">4.2-3 SalienceProjection</a></span>
+</div></div>
+</div>
+
+<h3>4 <span class="Heading">Operations on Automata</span></h3>
+
+<p>While the majority of the functionality of this package comes from algebraic manipulation, some problems are just not amenable to that setting. For those times, one might wish to work directly with finite automata. Here we offer one mechanism for importing machines and some decision problems that cannot be handled with semigroups alone.</p>
+
+<p><a id="X7E234C3582D64933" name="X7E234C3582D64933"></a></p>
+
+<h4>4.1 <span class="Heading">Importing Automata</span></h4>
+
+<p><a id="X7A74CB977868385B" name="X7A74CB977868385B"></a></p>
+
+<h5>4.1-1 AutomatonFromATT</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AutomatonFromATT</code>( <var class="Arg">stream</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: an automaton</p>
+
+<p>Import an automaton from AT&amp;T-style tabular text read from <var class="Arg">stream</var>. Each row contains no more than five whitespace-separated fields. An empty row is ignored. A row with one or two fields represents an accepting state, perhaps with a weight which is ignored here. A row with three, four, or five fields represents a transition. The first, second, and third fields always represent the source, destination, and input symbol, respectively, and subsequent fields are again ignored.</p>
+
+<p>For example the following text represents the pictured automaton, which itself represents strings over <span class="Math">\Sigma=\{a,b,c\}</span> not containing an "<span class="Math">ab</span>"-substring.</p>
+
+
+<div class="example"><pre>
+1 2 a
+1 1 b
+1 1 c
+1
+2 2 a
+2 3 b
+2 1 c
+2
+3 3 a
+3 3 b
+3 3 c
+</pre></div>
+
+<p><img src="fig-no-ab.svg"/></p>
+
+<p><a id="X82BDE1757BF5D21B" name="X82BDE1757BF5D21B"></a></p>
+
+<h4>4.2 <span class="Heading">Strict Locality and Relativizations</span></h4>
+
+<p>A language is locally testable in the strict sense (strictly local) iff there is some value <span class="Math">k</span> and some set <span class="Math">S</span> of anchored words of length at most <span class="Math">k</span> such that the words in the language are all and only those that do not contain any element of <span class="Math">S</span> as a substring when anchored. As this class is not closed under complement, there can be no characterization for the class based on the syntactic semigroup alone without further metadata. But all is not lost.</p>
+
+<p>Characterized by closure under substitution of suffixes following shared length-<span class="Math">k</span> substrings, the strictly local languages are associated with automata that synchronize after no more than <span class="Math">k</span> steps <a href="chapBib.html#biBEdlefsenEtAl2008">[ELM+08]</a>. In other words, from any state <span class="Math">p</span> it is necessarily the case that following a length-<span class="Math">k</span> word <span class="Math">w</span> will lead to the same state as it would when following <span class="Math">w</span> from any other state <span class="Math">q</span>.</p>
+
+<p>There exists an exponential-time algorithm for deciding membership in this class, which admits simultaneously extracting the grammar of forbidden substrings <a href="chapBib.html#biBRogersLambert2019b">[RL19]</a>, but the polynomial-time process of <a href="chapBib.html#biBEdlefsenEtAl2008">[ELM+08]</a> is used here. If the trim, minimal automaton has states <span class="Math">Q</span>, then class membership is decidable using the subgraph of the product construction containing only nodes of the form <span class="Math">Q\times Q</span> whose two components are inequal. The language is strictly local iff this graph is acyclic.</p>
+
+<p><a id="X80FD58AD848CA654" name="X80FD58AD848CA654"></a></p>
+
+<h5>4.2-1 <span class="Heading">Is(Tier)StrictlyLocal</span></h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsStrictlyLocal</code>( <var class="Arg">aut</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsTierStrictlyLocal</code>( <var class="Arg">aut</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<p>Returns: true or false</p>
+
+<p>Determine if the language represented by <var class="Arg">aut</var> is strictly <span class="Math">k</span>-local for some <span class="Math">k</span> that is, if it is definable as a conjunction of forbidden substrings. A language is <em>tier-based</em> strictly local iff there is some subset <span class="Math">T</span> of its alphabet (a tier of salient symbols) such that symbols not in <span class="Math">T</span> may be freely inserted and deleted and the projection to <span class="Math">T</span> is strictly local <a href="chapBib.html#biBLambert2022">[Lam22]</a>.</p>
+
+<p>The constructions used in deciding (tier-based) strict locality are exposed in case they might be useful for other purposes. Recall that salience has an algebraic characterization as well, which should be preferred when possible.</p>
+
+<p><a id="X7F0C9EE78218A84F" name="X7F0C9EE78218A84F"></a></p>
+
+<h5>4.2-2 DoubletonGraph</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DoubletonGraph</code>( <var class="Arg">aut</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: an automaton</p>
+
+<p>Construct an automaton whose underlying graph is the pair-graph used in deciding strict locality. The initial state is the pair containing two copies of the initial state of <var class="Arg">aut</var>, and the final states are all pairs in which both elements are accepting.</p>
+
+<p><a id="X7B1A0F2F79A719A7" name="X7B1A0F2F79A719A7"></a></p>
+
+<h5>4.2-3 SalienceProjection</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SalienceProjection</code>( <var class="Arg">aut</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Returns: an automaton</p>
+
+<p>Remove nonsalient symbols, those that are freely insertable and deletable. For a language in a tier-based class, this provides the projection under which the grammar operates. See also <code class="func">ProjectedSubsemigroup</code> (<a href="chap3.html#X7A1BBC0B7961F1B6"><span class="RefLink">3.1-6</span></a>).</p>
+
+
+<div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap3.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chapBib.html">[Next Chapter]</a>&nbsp;  </div>
+
+
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
+
+<hr />
+<p class="foot">generated by <a href="http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>
+</body>
+</html>

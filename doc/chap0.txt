@@ -1,1 +1,93 @@
-Placeholder
+  
+  
+                                  [1X FLClassify [101X
+  
+  
+                          [1X Classify formal languages [101X
+  
+  
+                                     0.1.0
+  
+  
+                                10 November 2022
+  
+  
+                                Dakotah Lambert
+  
+  
+  
+  Dakotah Lambert
+      Email:    [7Xmailto:dakotahlambert@acm.org[107X
+      Homepage: [7Xhttps://vvulpes0.github.io/[107X
+  
+  -------------------------------------------------------
+  [1XAbstract[101X
+  [33X[0;0YFLClassify  is a GAP package whose purpose is to analyze and classify formal
+  languages.[133X
+  
+  
+  -------------------------------------------------------
+  [1XCopyright[101X
+  [33X[0;0YCopyright © 2022 Dakotah Lambert.[133X
+  
+  [33X[0;0YPermission is hereby granted, free of charge, to any person obtaining a copy
+  of  this  software  and  associated documentation files (the "Software"), to
+  deal  in  the Software without restriction, including without limitation the
+  rights  to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell  copies  of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:[133X
+  
+  [33X[0;0YThe  above  copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.[133X
+  
+  [33X[0;0YTHE  SOFTWARE  IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED,  INCLUDING  BUT  NOT  LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS  FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS  OR  COPYRIGHT  HOLDERS  BE  LIABLE  FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY,  WHETHER  IN  AN  ACTION  OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.[133X
+  
+  [33X[0;0YAdditionally,  this  manual  alone may be distributed under the terms of the
+  Creative  Commons  Attribution  4.0 International License. To view a copy of
+  this license, visit [7Xhttp://creativecommons.org/licenses/by/4.0/[107X.[133X
+  
+  
+  -------------------------------------------------------
+  
+  
+  [1XContents (flclassify)[101X
+  
+  1 [33X[0;0YIntroduction[133X
+    1.1 [33X[0;0YInstallation[133X
+    1.2 [33X[0;0YPreliminaries[133X
+  2 [33X[0;0YGreen's Relations[133X
+    2.1 [33X[0;0YTriviality Under Certain Relations[133X
+      2.1-1 IsStarFree
+      2.1-2 IsPiecewiseTestable
+      2.1-3 IsAcom
+      2.1-4 IsDA
+    2.2 [33X[0;0YAffixes[133X
+      2.2-1 IsGeneralizedDefinite
+      2.2-2 Is(Tier)Definite
+      2.2-3 Is(Tier)ReverseDefinite
+  3 [33X[0;0YLocal Properties[133X
+    3.1 [33X[0;0YGenerating Local Submonoids[133X
+      3.1-1 LocalSubsemigroup
+      3.1-2 LocalSubmonoids
+      3.1-3 IteratorOfLocalSubmonoids
+      3.1-4 Locally
+      3.1-5 [33X[0;0YIsLocallyX[133X
+      3.1-6 ProjectedSubsemigroup
+      3.1-7 TierLocally
+      3.1-8 [33X[0;0YIsTierLocallyX[133X
+  4 [33X[0;0YOperations on Automata[133X
+    4.1 [33X[0;0YImporting Automata[133X
+      4.1-1 AutomatonFromATT
+    4.2 [33X[0;0YStrict Locality and Relativizations[133X
+      4.2-1 [33X[0;0YIs(Tier)StrictlyLocal[133X
+      4.2-2 DoubletonGraph
+      4.2-3 SalienceProjection
+  
+  
+  [32X
