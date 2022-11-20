@@ -49,6 +49,7 @@
   [33X[1;0Y[29X[2XIsLocallyLTrivial[102X( [3Xsemigroup[103X ) [32X property[133X
   [33X[1;0Y[29X[2XIsLocallyRTrivial[102X( [3Xsemigroup[103X ) [32X property[133X
   [33X[1;0Y[29X[2XIsLocallyJTrivial[102X( [3Xsemigroup[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsLocallyAcom[102X( [3Xsemigroup[103X ) [32X property[133X
   [33X[1;0Y[29X[2XIsLocallyThresholdTestable[102X( [3Xsemigroup[103X ) [32X property[133X
   [33X[1;0Y[29X[2XIsLocallyTestable[102X( [3Xsemigroup[103X ) [32X property[133X
   [6XReturns:[106X  [33X[0;10Ytrue or false[133X
@@ -56,12 +57,12 @@
   [33X[0;0YA  semigroup  satisfies  a  property locally iff all of its local submonoids
   satisfy the property.[133X
   
-  [33X[0;0YA  language  is  locally  threshold  testable iff its syntactic semigroup is
-  locally  Acom,  that  is,  locally  aperiodic  and  commutative. This result
-  derives  from  applying  the  work  of  Almeida  [Alm89]  to  the results of
-  Beauquier  and  Pin [BP89]. A language is locally testable iff its syntactic
-  semigroup  is  locally  a  semilattice,  that  is,  locally  idempotent  and
-  commutative [BS73].[133X
+  [33X[0;0YA  language  is  locally Acom iff all of its local submonoids are in Acom. A
+  language  is  locally  threshold  testable iff its syntactic semigroup is in
+  Acom[23X{}\ast{}[123XD, a subclass of locally Acom. This result derives from applying
+  the  results of Beauquier and Pin [BP89]. A language is locally testable iff
+  its   syntactic  semigroup  is  locally  a  semilattice,  that  is,  locally
+  idempotent and commutative [BS73].[133X
   
   [1X3.1-6 ProjectedSubsemigroup[101X
   
@@ -90,6 +91,7 @@
   [33X[1;0Y[29X[2XIsTierLocallyLTrivial[102X( [3Xsemigroup[103X ) [32X property[133X
   [33X[1;0Y[29X[2XIsTierLocallyRTrivial[102X( [3Xsemigroup[103X ) [32X property[133X
   [33X[1;0Y[29X[2XIsTierLocallyJTrivial[102X( [3Xsemigroup[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsTierLocallyAcom[102X( [3Xsemigroup[103X ) [32X property[133X
   [33X[1;0Y[29X[2XIsTierLocallyThresholdTestable[102X( [3Xsemigroup[103X ) [32X property[133X
   [33X[1;0Y[29X[2XIsTierLocallyTestable[102X( [3Xsemigroup[103X ) [32X property[133X
   [6XReturns:[106X  [33X[0;10Ytrue or false[133X

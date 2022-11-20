@@ -9,6 +9,7 @@
   [2XIsAcom[102X 2.1-3 
   [2XIsDA[102X, for IsSemigroup 2.1-4 
   [2XIsGeneralizedDefinite[102X, for IsSemigroup 2.2-1 
+  [2XIsLocallyAcom[102X, for IsSemigroup 3.1-5 
   [2XIsLocallyDA[102X, for IsSemigroup 3.1-5 
   [2XIsLocallyJTrivial[102X, for IsSemigroup 3.1-5 
   [2XIsLocallyLTrivial[102X, for IsSemigroup 3.1-5 
@@ -19,6 +20,7 @@
   [2XIsStarFree[102X 2.1-1 
   [2XIsStrictlyLocal[102X, for IsAutomatonObj 4.2-1 
   [2XIsTierGeneralizedDefinite[102X, for IsSemigroup 2.2-1 
+  [2XIsTierLocallyAcom[102X, for IsSemigroup 3.1-8 
   [2XIsTierLocallyDA[102X, for IsSemigroup 3.1-8 
   [2XIsTierLocallyJTrivial[102X, for IsSemigroup 3.1-8 
   [2XIsTierLocallyLTrivial[102X, for IsSemigroup 3.1-8 

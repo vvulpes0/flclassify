@@ -2,10 +2,6 @@
   
   [1XReferences[101X
   
-  [[20XAlm89[120X]  [16XAlmeida,  J.[116X,  [17XSemidirect  Products  of  Pseudovarieties  from  the
-  Universal  Algebraist's  Point of View[117X, [18XJournal of Pure and Applied Algebra[118X,
-  [19X60[119X, 2 (1989), 113--128.
-  
   [[20XBP89[120X]  [16XBeauquier,  D.  and Pin, J.-\.[116X ([1m[31mAusiello, G., Dezani-Ciancaglini, M.
   and  Ronchi Della Rocca, S.[15X, Eds.), [17XFactors of Words[117X, in Automata, Languages
   and   Programming:   16th   International   Colloquium,  Springer  Berlin  /

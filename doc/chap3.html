@@ -92,13 +92,14 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsLocallyLTrivial</code>( <var class="Arg">semigroup</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsLocallyRTrivial</code>( <var class="Arg">semigroup</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsLocallyJTrivial</code>( <var class="Arg">semigroup</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsLocallyAcom</code>( <var class="Arg">semigroup</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsLocallyThresholdTestable</code>( <var class="Arg">semigroup</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsLocallyTestable</code>( <var class="Arg">semigroup</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <p>Returns: true or false</p>
 
 <p>A semigroup satisfies a property locally iff all of its local submonoids satisfy the property.</p>
 
-<p>A language is locally threshold testable iff its syntactic semigroup is locally Acom, that is, locally aperiodic and commutative. This result derives from applying the work of Almeida <a href="chapBib.html#biBAlmeida1989">[Alm89]</a> to the results of Beauquier and Pin <a href="chapBib.html#biBBeauquierPin1989">[BP89]</a>. A language is locally testable iff its syntactic semigroup is locally a semilattice, that is, locally idempotent and commutative <a href="chapBib.html#biBBrzozowskiSimon1973">[BS73]</a>.</p>
+<p>A language is locally Acom iff all of its local submonoids are in Acom. A language is locally threshold testable iff its syntactic semigroup is in Acom<span class="Math">{}\ast{}</span>D, a subclass of locally Acom. This result derives from applying the results of Beauquier and Pin <a href="chapBib.html#biBBeauquierPin1989">[BP89]</a>. A language is locally testable iff its syntactic semigroup is locally a semilattice, that is, locally idempotent and commutative <a href="chapBib.html#biBBrzozowskiSimon1973">[BS73]</a>.</p>
 
 <p><a id="X7A1BBC0B7961F1B6" name="X7A1BBC0B7961F1B6"></a></p>
 
@@ -126,6 +127,7 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsTierLocallyLTrivial</code>( <var class="Arg">semigroup</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsTierLocallyRTrivial</code>( <var class="Arg">semigroup</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsTierLocallyJTrivial</code>( <var class="Arg">semigroup</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsTierLocallyAcom</code>( <var class="Arg">semigroup</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsTierLocallyThresholdTestable</code>( <var class="Arg">semigroup</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsTierLocallyTestable</code>( <var class="Arg">semigroup</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <p>Returns: true or false</p>
