@@ -303,12 +303,17 @@ DeclareProperty("IsLocallyJTrivial", IsSemigroup);
 #! @Arguments semigroup
 #! @Returns true or false
 #! @Description
+#! A language is locally Acom
+#! iff all of its local submonoids are in Acom.
+DeclareProperty("IsLocallyAcom", IsSemigroup);
+#! @Arguments semigroup
+#! @Returns true or false
+#! @Description
 #! A language is locally threshold testable
-#! iff its syntactic semigroup is locally Acom,
-#! that is, locally aperiodic and commutative.
+#! iff its syntactic semigroup is in Acom${}\ast{}$D,
+#! a subclass of locally Acom.
 #! This result derives from applying
-#! the work of Almeida <Cite Key="Almeida1989"/>
-#! to the results of Beauquier and Pin <Cite Key="BeauquierPin1989"/>.
+#! the results of Beauquier and Pin <Cite Key="BeauquierPin1989"/>.
 DeclareProperty("IsLocallyThresholdTestable", IsSemigroup);
 #! @Arguments semigroup
 #! @Returns true or false
@@ -358,6 +363,8 @@ DeclareProperty("IsTierLocallyLTrivial", IsSemigroup);
 DeclareProperty("IsTierLocallyRTrivial", IsSemigroup);
 #! @Arguments semigroup
 DeclareProperty("IsTierLocallyJTrivial", IsSemigroup);
+#! @Arguments semigroup
+DeclareProperty("IsTierLocallyAcom", IsSemigroup);
 #! @Arguments semigroup
 DeclareProperty("IsTierLocallyThresholdTestable", IsSemigroup);
 #! @Arguments semigroup

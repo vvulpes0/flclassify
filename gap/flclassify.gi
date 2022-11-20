@@ -28,14 +28,31 @@ InstallMethod(IsLocallyTestable, "for a semigroup",
 function(S)
 	return Locally(IsSemilattice, S);
 end);
+InstallTrueMethod(IsLocallyAcom, IsLocallyThresholdTestable);
+InstallTrueMethod(IsLocallyAcom, IsAcom);
+InstallMethod(IsLocallyAcom, "for a semigroup",
+[IsSemigroup],
+function(S)
+	return IsStarFree(S) and Locally(IsCommutative, S);
+end);
 InstallTrueMethod(IsLocallyThresholdTestable, IsLocallyTestable);
 InstallTrueMethod(IsLocallyThresholdTestable, IsAcom);
 InstallMethod(IsLocallyThresholdTestable, "for a semigroup",
 [IsSemigroup],
 function(S)
-	return IsStarFree(S) and Locally(IsCommutative, S);
+	local a,b,c,e,f,x,y,idem,elem;
+	if not IsStarFree(S) then return false; fi;
+	idem := Idempotents(S);
+	elem := AsList(S);
+	for e in idem do for f in idem do
+		for a in elem do for b in elem do for c in elem do
+			x := e * a * f * b * e * c * f;
+			y := e * c * f * b * e * a * f;
+			if x<>y then return false; fi;
+	od;od;od;od;od;
+	return true;
 end);
-InstallTrueMethod(IsLocallyJTrivial, IsLocallyThresholdTestable);
+InstallTrueMethod(IsLocallyJTrivial, IsLocallyAcom);
 InstallTrueMethod(IsLocallyJTrivial, IsDTrivial and IsFinite);
 InstallMethod(IsLocallyJTrivial, "for a semigroup",
 [IsSemigroup],
@@ -82,12 +99,20 @@ InstallMethod(IsTierLocallyTestable, "for a semigroup",
 function(S)
 	return TierLocally(IsSemilattice, S);
 end);
+InstallTrueMethod(IsTierLocallyAcom, IsTierLocallyThresholdTestable);
+InstallTrueMethod(IsTierLocallyAcom, IsLocallyAcom);
+InstallMethod(IsTierLocallyAcom, "for a semigroup",
+[IsSemigroup],
+function(S)
+	return IsStarFree(S) and TierLocally(IsCommutative, S);
+end);
 InstallTrueMethod(IsTierLocallyThresholdTestable, IsTierLocallyTestable);
 InstallTrueMethod(IsTierLocallyThresholdTestable, IsLocallyThresholdTestable);
 InstallMethod(IsTierLocallyThresholdTestable, "for a semigroup",
 [IsSemigroup],
 function(S)
-	return IsStarFree(S) and TierLocally(IsCommutative, S);
+	return IsStarFree(S)
+		and IsLocallyThresholdTestable(ProjectedSubsemigroup(S));
 end);
 InstallTrueMethod(IsTierLocallyJTrivial, IsTierLocallyThresholdTestable);
 InstallTrueMethod(IsTierLocallyJTrivial, IsLocallyJTrivial);
